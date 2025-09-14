@@ -15,6 +15,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import javax.inject.Singleton
+import java.time.Duration
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -24,10 +25,10 @@ object NetworkModule {
 
     @Provides @Singleton
     fun provideOkHttp(): OkHttpClient = OkHttpClient.Builder()
-        .callTimeout(java.time.Duration.ofSeconds(15))
-        .connectTimeout(java.time.Duration.ofSeconds(10))
-        .readTimeout(java.time.Duration.ofSeconds(10))
-        .writeTimeout(java.time.Duration.ofSeconds(10))
+        .callTimeout(Duration.ofSeconds(15))
+        .connectTimeout(Duration.ofSeconds(10))
+        .readTimeout(Duration.ofSeconds(10))
+        .writeTimeout(Duration.ofSeconds(10))
         .addInterceptor(
             HttpLoggingInterceptor { msg ->
                 Log.d(TAG_NET, msg)

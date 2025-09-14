@@ -11,7 +11,8 @@ fun UserDto.toDomain(): User {
         is JsonPrimitive -> p.content
         else -> ""
     }
-    val address = "${location.street.number} ${location.street.name}, ${location.city}, ${location.state} $postcode"
+    val address =
+        "${location.street.number} ${location.street.name}, ${location.city}, ${location.state} $postcode"
     val user = User(
         id = login.uuid,
         fullName = "${name.first} ${name.last}",
