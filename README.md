@@ -93,11 +93,21 @@ Instrumented tests (requires emulator or device):
 *Unit Tests*
 - **UserRepositoryImplTest**
   - Returns 20 users from network.
-  - Repository caching works (second call served from cache).
   - Proper JSON parsing error handling.
-- **MapperTest**
+- **UserMappersTest**
   - DTO → Domain conversion.
   - Handles mixed-type postcode (string/number).
+- **UseCasesTest**
+  - Uses an in-memory `TestRepository` with 20 test users.
+  - **getUsersUseCase**: verifies that 20 users are returned.
+  - **getUserByIdUseCase**: verifies that user with id `id-5` is correctly retrieved with `fullName = "User 5"`.
+- **UsersViewModelTest** (Unit Test)
+  - Type: Presentation layer unit test.
+  - Purpose: verifies that `UsersViewModel` correctly updates its `UiState` when fetching users.
+  - Checks:
+      - First state is `Loading`.
+      - After repository returns 20 users, state changes to `Success` with the expected data size.
+  - Importance: medium — ensures that the ViewModel orchestrates data flow correctly using coroutines and flows.
   
 *Integration Tests*
 - **UsersFlowInstrumentedTest**
