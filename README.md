@@ -10,13 +10,12 @@ Android test project with two screens:
 
 Architecture: **MVVM + Clean Architecture** (layers: Data / Domain / Presentation).
 
-app/
-├── data/ # DTOs, Retrofit API, repository implementation, mappers
-├── domain/ # Models, repository interfaces, use cases
-├── presentation/ # Compose UI, ViewModels, navigation
-├── logging/ # logger (works in runtime and tests)
-└── di/ # Hilt modules (NetworkModule, etc.)
-
+app/   
+ ├── data/ # DTOs, Retrofit API, repository implementation, mappers<br>
+ ├── domain/ # Models, repository interfaces, use cases<br>
+ ├── presentation/ # Compose UI, ViewModels, navigation<br>
+ ├── logging/ # logger (works in runtime and tests)<br>
+ └── di/ # Hilt modules (NetworkModule, etc.)
 
 ---
 
