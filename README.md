@@ -57,7 +57,6 @@ app/
 Custom **Logcat tags** are used per layer:
 
 - `NET.OkHttp` — HTTP requests/responses
-- `NET.Raw` — raw JSON response (limited to 4K characters)
 - `Repo.User` — repository (getUsers, getUserById)
 - `Mapper.User` — DTO → Domain mapping warnings
 - `VM.Users` — users list ViewModel
@@ -84,10 +83,6 @@ Custom **Logcat tags** are used per layer:
 - **Unit tests (JVM, no Android, no internet):**
   ```bash
   ./gradlew :app:testDebugUnitTest
-
-Instrumented tests (requires emulator or device):
-
-./gradlew :app:connectedDebugAndroidTest
 
 ## ✅ Test Coverage
 *Unit Tests*
