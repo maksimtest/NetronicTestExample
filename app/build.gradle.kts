@@ -85,21 +85,12 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // Unit test
-        //testImplementation("junit:junit:4.13.2")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1")
     testImplementation("app.cash.turbine:turbine:1.1.0")
     testImplementation("com.google.truth:truth:1.4.4")
     testImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
 
-    // Unit test
-//    testImplementation("junit:junit:4.13.2")
-//    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1")
-//    testImplementation("app.cash.turbine:turbine:1.1.0")
-//    testImplementation("com.google.truth:truth:1.4.4")
-//    testImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
-
-
-// Instrumented (androidTest)
+    // Instrumented (androidTest)
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
@@ -107,11 +98,7 @@ dependencies {
     kspAndroidTest("com.google.dagger:hilt-android-compiler:2.57.1")
     androidTestImplementation("com.squareup.okhttp3:mockwebserver:4.12.0")
 
-    // Hilt testing (androidTest)
-        //    androidTestImplementation("com.google.dagger:hilt-android-testing:2.57.1")
-    //kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.57.1")
-
-    // (опц.) для JVM unit-тестів теж можна:
+    //
     testImplementation("com.google.dagger:hilt-android-testing:2.57.1")
     kspTest("com.google.dagger:hilt-android-compiler:2.57.1")
 }
