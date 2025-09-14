@@ -36,7 +36,7 @@ app/
 
 ## 🐞 Key Issues & Solutions
 
-1. **No internet access on emulator**  
+1. **No internet access**  
    ➝ Added `INTERNET` permission in `AndroidManifest.xml`.  
    ➝ Tests use `MockWebServer` (no real internet needed).
 
