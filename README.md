@@ -99,6 +99,7 @@ Instrumented tests (requires emulator or device):
 - **MapperTest**
   - DTO → Domain conversion.
   - Handles mixed-type postcode (string/number).
+  
 *Integration Tests*
 - **UsersFlowInstrumentedTest**
   - Users screen renders 20 items.
